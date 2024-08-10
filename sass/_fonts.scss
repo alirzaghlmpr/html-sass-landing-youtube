@@ -1,0 +1,10 @@
+@mixin genereta_font_face($font_name, $font_weight, $font_address) {
+  @font-face {
+    font-family: $font_name;
+    src: url($font_address);
+    font-weight: $font_weight;
+  }
+}
+
+@include genereta_font_face("moadm", 400, "../assets/fonts/Modam-Regular.ttf");
+@include genereta_font_face("moadm", 700, "../assets/fonts/Modam-Bold.ttf");

@@ -1,0 +1,35 @@
+@import "colors";
+
+.button {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  padding: 0.25rem;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &-primary {
+    @extend .button;
+    background-color: $primary_color;
+    color: $light_color;
+  }
+  &-secondary {
+    @extend .button;
+    background-color: $secondary_color;
+    color: $primary_color;
+  }
+  &-tertiary {
+    @extend .button;
+    background-color: $tertiary_color;
+    color: $neutral_color;
+  }
+  &-neutral {
+    @extend .button;
+    background-color: $neutral_color;
+    color: $primary_color;
+  }
+}

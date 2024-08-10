@@ -1,0 +1,32 @@
+$primary_color: #17153b;
+$secondary_color: #2e236c;
+$tertiary_color: #433d8b;
+$neutral_color: #c8acd6;
+$light_color: #fbfbfb;
+
+$colors: (
+  primary: $primary_color,
+  secondary: $secondary_color,
+  tertiary: $tertiary_color,
+  nuetral: $neutral_color,
+  light: $light_color,
+);
+
+@mixin generate_bg_colors() {
+  @each $name, $value in $colors {
+    .bg-#{$name} {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin generate_text_colors() {
+  @each $name, $value in $colors {
+    .text-#{$name} {
+      color: $value;
+    }
+  }
+}
+
+@include generate_bg_colors();
+@include generate_text_colors();
